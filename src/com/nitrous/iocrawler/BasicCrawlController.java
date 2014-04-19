@@ -6,8 +6,9 @@ import edu.uci.ics.crawler4j.fetcher.PageFetcher;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtConfig;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 
+
 /**
- * @author Yasser Ganjisaffar <lastname at gmail dot com>
+ * @author Yasser Ganjisaffar <lastname at gmail dot com> https://code.google.com/p/crawler4j/
  */
 public class BasicCrawlController {
 
@@ -15,8 +16,9 @@ public class BasicCrawlController {
 	//public static final String BASE_URL = "https://developer.android.com/";
 	//
 	//public static final String SEARCH_TERM = "lg.oog";
-	public static final String SEARCH_TERM = "goo.gl";
-	
+    // public static final String SEARCH_TERM = "goo.gl";
+    public static final String SEARCH_TERM = "<!-- ha! begin digest -->";
+
 	public static void main(String[] args) throws Exception {
 //		if (args.length != 2) {
 //			System.out.println("Needed parameters: ");
@@ -36,12 +38,12 @@ public class BasicCrawlController {
 		 * be initiated for crawling.
 		 */
 //		int numberOfCrawlers = Integer.parseInt(args[1]);
-		
-		String crawlStorageFolder = "/Users/sheehanj/Documents/workspace/WebcrawlerTest/data";
+
+        String crawlStorageFolder = "/Users/jaredsheehan/Documents/workspace/io2014webcrawler/data";
 		int numberOfCrawlers = 20;
 		crawl(crawlStorageFolder, numberOfCrawlers);
 	}
-	
+
 	public static void crawl(String crawlStorageFolder, int numberOfCrawlers) throws Exception {
 		CrawlConfig config = new CrawlConfig();
 
@@ -69,7 +71,7 @@ public class BasicCrawlController {
 		 * Do you need to set a proxy? If so, you can use:
 		 * config.setProxyHost("proxyserver.example.com");
 		 * config.setProxyPort(8080);
-		 * 
+		 *
 		 * If your proxy also needs authentication:
 		 * config.setProxyUsername(username); config.getProxyPassword(password);
 		 */
@@ -82,10 +84,10 @@ public class BasicCrawlController {
 		 * rootFolder manually.
 		 */
 		config.setResumableCrawling(false);
-		
+
 		config.setIncludeHttpsPages(true);
 		config.setIncludeBinaryContentInCrawling(true);
-		
+
 		/*
 		 * Instantiate the controller for this crawl.
 		 */
